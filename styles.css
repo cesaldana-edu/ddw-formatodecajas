@@ -11,7 +11,7 @@
 }
 
 /* GLOBAL STYLES */
-body { font-family: "Nunito Sans", sans-serif; font-size: 1em; color: #333; }
+body { font-family: "Nunito Sans", sans-serif; font-size: 1em; color: #333; } 
 a { text-decoration: none; }
 p { margin-bottom: 1em;}
 h1, h2 { font-family: "Paytone One", sans-serif; color: #3A3330;}
@@ -26,10 +26,13 @@ h2 { font-size: 2.4em; }
 .txt-mid { color: #F69946;}
 .txt-dark { color: #3A3330;}
 
+
 /* HEADER */
-header { padding: 20px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;}
-header .logo img { width: 70px; margin-bottom: .5em;}
-header nav ul { list-style: none; padding: 0; }
+header { padding: 20px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; display: ;}
+header .logo { font-family: "Paytone One", sans-serif; font-weight: 500; vertical-align: top; display: inline-block; text-align: center; width: 120px; }
+header .logo img { width: 70px; }
+header .logo span { font-size: 2em; line-height: .4em; }
+header nav ul { list-style: none; padding: 0; margin-top: 1em; font-size: 1.2em;}
 header nav ul li { display: inline; margin: 0 10px; }
 header nav ul li a { text-decoration: none; font-weight: 700; color: #3A3330; }
 header nav ul li a:hover { text-decoration: underline; }
@@ -40,27 +43,11 @@ header nav ul li a:hover { color: #F69946; outline: none; }
 .container { margin: auto; text-align: center; margin-top: 2em; margin-bottom: 3em;}
 .column { width: 500px; margin: 20px; display: inline-block; text-align: left; }
 .column h1 { text-align: center; }
-.column img { max-width: 380px; }
+.column img { max-width: 350px; padding-left: 1em;}
 
-.form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    font-size: 14px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.contact-form input,
-.contact-form textarea {
+.form-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 380px; text-align: justify; font-size: 14px; }
+.contact-form label { display: block; margin-bottom: 8px; font-weight: 700; }
+.contact-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -73,6 +60,7 @@ header nav ul li a:hover { color: #F69946; outline: none; }
 
 .contact-form button {
     background-color: #F69946;
+    border: 1px solid #F69946;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -86,11 +74,26 @@ header nav ul li a:hover { color: #F69946; outline: none; }
 .contact-form button:hover {
     background-color: #3A3330;
     color: #F69946;
+    border: 1px solid #3A3330;
 }
 
 /* FOOTER */
-footer { background-color: #3A3330; color: #fff; text-align: center; padding: 20px; position: absolute; bottom: 0; width: 100%;}
+footer { text-align: center; padding: 20px; position: absolute; width: 100%; border-top: 1px solid #ddd;}
 footer .redes_sociales { margin-bottom: .4em; }
 footer .redes_sociales i:not(:first-child) { margin-left: .5em; }
+
+
+/* THEME */
+/* Oculta los inputs de radio */
+.theme-toggle { display: none; }
+.toggle-label { display: inline-block; padding: 5px 20px; margin: 20px 5px 5px 5px; cursor: pointer; background-color: #3A3330; color: #FCF9F4; border-radius: 4px;  text-align: center; font-size: 12px;}
+body:has(#dark-theme:checked) { background-color: #3A3330; color: #FCF9F4; }
+body:has(#dark-theme:checked) .toggle-label { background-color: #F69946; }
+body:has(#dark-theme:checked) header { background-color: #3A3330; border-bottom: 1px solid #444; }
+body:has(#dark-theme:checked) header nav li a { color: #FCF9F4;}
+body:has(#dark-theme:checked) h1 { color: #FCF9F4; font-weight: 500; }
+body:has(#dark-theme:checked) .form-container { background-color: #3A3330; border: 1px solid #FCF9F4; }
+body:has(#dark-theme:checked) .form-container button:hover { border: 1px solid #F69946; }
+body:has(#dark-theme:checked) footer { border: 1px solid #444; }
 
 
